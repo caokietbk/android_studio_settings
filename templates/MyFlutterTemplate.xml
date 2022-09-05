@@ -308,4 +308,16 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="hsbox" value="const SizedBox(height: $number$)," description="A height SizedBox widget" toReformat="false" toShortenFQNames="true">
+    <variable name="number" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="wsbox" value="const SizedBox(width: $number$)," description="A width SizedBox widget" toReformat="false" toShortenFQNames="true">
+    <variable name="number" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
