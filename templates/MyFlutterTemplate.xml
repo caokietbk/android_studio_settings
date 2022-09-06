@@ -1,6 +1,7 @@
 <templateSet group="MyFlutterTemplate">
-  <template name="clf" value="class $file$ {&#10;    $END$&#10;}" description="New Class with same file name" toReformat="false" toShortenFQNames="true">
-    <variable name="file" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="false" />
+  <template name="clf" value="class $file$ {&#10;    $properties$&#10;}" description="New Class with same file name" toReformat="false" toShortenFQNames="true">
+    <variable name="file" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="properties" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
@@ -278,8 +279,9 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="freezedClass" value="@freezed&#10;class $NAME$ with _$$$NAME$ {&#10;}" description="Create a freezed Class" toReformat="true" toShortenFQNames="true">
+  <template name="fclass" value="@freezed&#10;class $NAME$ with _$$$NAME$ {&#10;    const factory $NAME$($properties$) = _$NAME$;&#10;}" description="Create a freezed Class" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="properties" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
@@ -296,7 +298,7 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="freezedJsonPart" value="part '$FILENAME$.g.dart';&#10;" description="add the json_serializabe part statement" toReformat="false" toShortenFQNames="true">
+  <template name="freezedJsonPart" value="part '$FILENAME$.g.dart';" description="add the json_serializabe part statement" toReformat="false" toShortenFQNames="true">
     <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
