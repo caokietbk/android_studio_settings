@@ -1,5 +1,5 @@
 <templateSet group="MyFlutterTemplate">
-  <template name="clf" value="class $file$ {&#10;    $properties$&#10;}" description="New Class with same file name" toReformat="false" toShortenFQNames="true">
+  <template name="clf" value="class $file$ {&#10;    $properties$&#10;}" description="New Class with same file name" toReformat="true" toShortenFQNames="true">
     <variable name="file" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
     <variable name="properties" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -15,7 +15,7 @@
   <template name="funion" value="@freezed&#10;class $ClassName$ with _$$$ClassName$ {&#10;    const $ClassName$._();&#10;    const factory $ClassName$.$union$() = _$uppercaseUnion$;&#10;}" description="New Freezed Union" toReformat="false" toShortenFQNames="true">
     <variable name="ClassName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="union" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="uppercaseUnion" expression="capitalize(union)" defaultValue="" alwaysStopAt="true" />
+    <variable name="uppercaseUnion" expression="capitalize(union)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART" value="true" />
     </context>
@@ -279,33 +279,27 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="fclass" value="@freezed&#10;class $NAME$ with _$$$NAME$ {&#10;    const factory $NAME$($properties$) = _$NAME$;&#10;}" description="Create a freezed Class" toReformat="true" toShortenFQNames="true">
+  <template name="fclass" value="@freezed&#10;class $NAME$ with _$$$NAME$ {&#10;    const $NAME$._();&#10;    const factory $NAME$($properties$) = _$NAME$;&#10;}" description="Create a freezed Class" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="properties" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="freezedConst" value="const factory $NAME$() = _$NAME$;&#10;" description="Create a basic freezed constructor" toReformat="false" toShortenFQNames="true">
+  <template name="fjson" value="factory $NAME$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$NAME$FromJson(json);" description="create a freezed fromJson method" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="dartClassName()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="freezedFromJson" value="factory $NAME$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$NAME$FromJson(json);" description="create a freezed fromJson method" toReformat="true" toShortenFQNames="true">
-    <variable name="NAME" expression="dartClassName()" defaultValue="" alwaysStopAt="false" />
+  <template name="pts" value="part '$FILENAME$.g.dart';" description="add the json_serializabe part statement" toReformat="true" toShortenFQNames="true">
+    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="freezedJsonPart" value="part '$FILENAME$.g.dart';" description="add the json_serializabe part statement" toReformat="false" toShortenFQNames="true">
-    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="DART" value="true" />
-    </context>
-  </template>
-  <template name="freezedPart" value="part '$FILENAME$.freezed.dart';&#10;" description="add a freezed part statement" toReformat="true" toShortenFQNames="true">
-    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+  <template name="ptf" value="part '$FILENAME$.freezed.dart';" description="add a freezed part statement" toReformat="true" toShortenFQNames="true">
+    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART" value="true" />
     </context>
