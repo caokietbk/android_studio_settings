@@ -1,4 +1,15 @@
 <keymap version="1" name="macOS copy" parent="Mac OS X 10.5+">
+  <action id="AceAction" />
+  <action id="AceDeclarationAction">
+    <keyboard-shortcut first-keystroke="shift ctrl semicolon" />
+  </action>
+  <action id="AceLineAction" />
+  <action id="AceTargetAction">
+    <keyboard-shortcut first-keystroke="ctrl semicolon" />
+  </action>
+  <action id="AceWordEndAction">
+    <keyboard-shortcut first-keystroke="ctrl alt semicolon" />
+  </action>
   <action id="ActivateFavoritesToolWindow">
     <keyboard-shortcut first-keystroke="alt f12" />
   </action>
