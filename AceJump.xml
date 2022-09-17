@@ -1,5 +1,6 @@
 <application>
   <component name="AceConfig">
     <option name="showSearchNotification" value="true" />
+    <option name="jumpModeRGB" value="-3254184" />
   </component>
 </application>
