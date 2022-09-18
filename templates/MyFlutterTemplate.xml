@@ -12,9 +12,10 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="funion" value="@freezed&#10;class $ClassName$ with _$$$ClassName$ {&#10;    const $ClassName$._();&#10;    const factory $ClassName$.$union$() = _$uppercaseUnion$;&#10;}" description="New Freezed Union" toReformat="false" toShortenFQNames="true">
+  <template name="funion" value="@freezed&#10;class $ClassName$ with _$$$ClassName$ {&#10;    const $ClassName$._();&#10;    const factory $ClassName$.$union$($variables$) = _$uppercaseUnion$;&#10;}" description="New Freezed Union" toReformat="false" toShortenFQNames="true">
     <variable name="ClassName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="union" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variables" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="uppercaseUnion" expression="capitalize(union)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART" value="true" />
