@@ -10,6 +10,7 @@
   <action id="AceWordEndAction">
     <keyboard-shortcut first-keystroke="ctrl alt semicolon" />
   </action>
+  <action id="ActivateBookmarksToolWindow" />
   <action id="ActivateFavoritesToolWindow">
     <keyboard-shortcut first-keystroke="alt f12" />
   </action>
